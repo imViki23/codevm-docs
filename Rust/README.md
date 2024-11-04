@@ -64,25 +64,25 @@ fn main() {
 }
 ```
 
-# Concepts
+## Concepts
 
-## 1. Variables
+### 1. Variables
 
-### Variables are immutable by default
+#### Variables are immutable by default
 
 ```rust
 let x = 5;
 x = 6; // Compile error: cannot assign again to a immutable variable
 ```
 
-### Use `mut` to make variables mutable
+#### Use `mut` to make variables mutable
 
 ```rust
 let mut x = 5;
 x = 6; // No error
 ```
 
-### Shadowing
+#### Shadowing
 
 - We can't mutate but we can shadow variable.
 
@@ -100,7 +100,7 @@ let x = "hello";
 println!("x = {}", x);  // Outputs x = hello
 ```
 
-### Constant variable
+#### Constant variable
 
 - Type is mandatory for const.
 - Once assigned it can't be changed or mutated.
@@ -110,9 +110,9 @@ const SEQ_MAX: u32 = 5;
 println!("x = {}", SEQ_MAX); // Outputs x = 5
 ```
 
-## 2. Data types
+### 2. Data types
 
-### Scalar data type
+#### Scalar data type
 
 ```rust
 let x: u32 = 800_000; // Outputs 800000
@@ -121,7 +121,7 @@ let x: bool = true; // Outputs true
 let x: char = 'S'; // Outputs S
 ```
 
-### Complex data type - Arrays and Tuples
+#### Complex data type - Arrays and Tuples
 
 ```rust
 let arr = [99, 98, 97];
@@ -132,7 +132,7 @@ let (_name, rank) = tup;
 println!("{} and {}", tup.1, rank); // Outputs 294 and 294
 ```
 
-## 3. Functions
+### 3. Functions
 
 ```rust
 fn main() {
@@ -145,9 +145,9 @@ fn add(a: i32, b: i32) -> i32 {
 }
 ```
 
-## 5. Ownership
+### 5. Ownership
 
-### Heap variables can only be moved, copy is not possible.
+#### Heap variables can only be moved, copy is not possible.
 
 ```rust
 // Stack memory variable
@@ -170,7 +170,7 @@ let b = a.clone();
 println!("a = {}, b = {}", a, b); // Ouputs a = hello, b = hello
 ```
 
-### For heap variable, there can be only one owner
+#### For heap variable, there can be only one owner
 
 ```rust
 fn main() {
@@ -200,7 +200,7 @@ fn echo(msg: &mut String) {
 }
 ```
 
-### Local heap variables cannot be returned as reference, as it is descoped
+#### Local heap variables cannot be returned as reference, as it is descoped
 
 ```rust
 fn main() {
@@ -228,9 +228,9 @@ fn greet() -> String {
 }
 ```
 
-## 5. Condtional statements and loops
+### 5. Condtional statements and loops
 
-## 6. Structs
+### 6. Structs
 
 ```rust
 struct Rectangle {
@@ -263,7 +263,7 @@ fn main() {
 
 ```
 
-## 7. Enum & pattern matching
+### 7. Enum & pattern matching
 
 ```rust
 enum Color {
