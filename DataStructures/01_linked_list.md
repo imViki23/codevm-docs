@@ -1,5 +1,0 @@
-# Linked List
-
-```java
-
-```
