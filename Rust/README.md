@@ -1,22 +1,38 @@
 # Rust tutorial
 
-## Cheatsheets
+## Table of contents
 
-- `rustc --version`
-- `cargo --version`
-- `cargo new rust_app`
-- `cargo build`
+- [Quick Bites](#quick-bites)
+- [Cheatsheets](#cheatsheets)
+- [Rust sample program](#rust-sample-program)
+- [Concepts](#concepts)
+    - [1. Variables](#1-variables)
+    - [2. Data types](#2-data-types)
+    - [3. Functions](#3-functions)
+    - [4. Ownership](#4-ownership)
+    - [5. Conditional statements and Loops](#5-condtional-statements-and-loops)
+    - [6. Structs](#6-structs)
+    - [7. Enum & pattern matching](#7-enum--pattern-matching)
 
-## Highlights
+## Quick Bites
 
 - Rust is an alternative to C++.
 - It is memory safe.
 - It has no concept of NULL.
-- It follows Ownership and borrow concept, so it doesn't need garbage collector.
+- It follows Ownership and borrow concept, so it doesn't need garbage collector, hence it is memory safe.
     - [Heap memory variables can only be moved, copy is not possible.](#heap-variables-can-only-be-moved-copy-is-not-possible)
     - [For heap variable, there can be only one owner.](#for-heap-variable-there-can-be-only-one-owner) 
     - [Local heap variables cannot be returned as reference, as it is descoped.](#local-heap-variables-cannot-be-returned-as-reference-as-it-is-descoped)
 - Use underscore if the variable is not used.
+- **cargo** is a package manager and build tool for rust.
+
+## Cheatsheets
+
+- `rustc --version` - To check rust version installed.
+- `cargo --version` - To check cargo version installed.
+- `cargo new rust_app` - To create new rust application.
+- `cargo run` - To run rust app.
+- `cargo build` - To build rust app to executable.
 
 ## Rust sample program
 
