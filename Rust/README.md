@@ -64,9 +64,11 @@ fn main() {
 }
 ```
 
-# Concepts
+## Concepts
 
-## 1. Variables
+### 1. Variables
+
+---
 
 #### Variables are immutable by default
 
@@ -110,7 +112,9 @@ const SEQ_MAX: u32 = 5;
 println!("x = {}", SEQ_MAX); // Outputs x = 5
 ```
 
-## 2. Data types
+### 2. Data types
+
+---
 
 #### Scalar data type
 
@@ -132,7 +136,9 @@ let (_name, rank) = tup;
 println!("{} and {}", tup.1, rank); // Outputs 294 and 294
 ```
 
-## 3. Functions
+### 3. Functions
+
+---
 
 ```rust
 fn main() {
@@ -145,7 +151,9 @@ fn add(a: i32, b: i32) -> i32 {
 }
 ```
 
-## 5. Ownership
+### 4. Ownership
+
+---
 
 #### Heap variables can only be moved, copy is not possible.
 
@@ -228,9 +236,13 @@ fn greet() -> String {
 }
 ```
 
-## 5. Condtional statements and loops
+### 5. Condtional statements and loops
 
-## 6. Structs
+---
+
+### 6. Structs
+
+---
 
 ```rust
 struct Rectangle {
@@ -263,7 +275,7 @@ fn main() {
 
 ```
 
-## 7. Enum & pattern matching
+### 7. Enum & pattern matching
 
 ```rust
 enum Color {
