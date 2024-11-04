@@ -68,8 +68,6 @@ fn main() {
 
 ### 1. Variables
 
----
-
 #### Variables are immutable by default
 
 ```rust
@@ -114,8 +112,6 @@ println!("x = {}", SEQ_MAX); // Outputs x = 5
 
 ### 2. Data types
 
----
-
 #### Scalar data type
 
 ```rust
@@ -138,8 +134,6 @@ println!("{} and {}", tup.1, rank); // Outputs 294 and 294
 
 ### 3. Functions
 
----
-
 ```rust
 fn main() {
     let result = add(1, 3);
@@ -152,8 +146,6 @@ fn add(a: i32, b: i32) -> i32 {
 ```
 
 ### 4. Ownership
-
----
 
 #### Heap variables can only be moved, copy is not possible.
 
@@ -238,11 +230,7 @@ fn greet() -> String {
 
 ### 5. Condtional statements and loops
 
----
-
 ### 6. Structs
-
----
 
 ```rust
 struct Rectangle {
