@@ -1,8 +1,15 @@
 # MySQL
 
-> The goal is to learn MySQL by developing a comprehensive database solution for an educational institution named **VPK University**. This application should efficiently manage key academic components, including:
->
-> - **Students, Courses and Assets Management**
+The goal is to learn MySQL by developing a comprehensive database solution for an educational institution named **VPK University**. This application should efficiently manage key academic components, including:
+
+- **Students, Courses and Assets Management**
+
+## Table of contents
+
+- [Database administration](#database-administration)
+- [Tables](#tables)
+- [Steps](#steps)
+- [FAQ's](#faqs)
 
 ## Database administration
 
