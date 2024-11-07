@@ -33,6 +33,7 @@
 - `cargo new rust_app` - To create new rust application.
 - `cargo run` - To run rust app.
 - `cargo build` - To build rust app to executable.
+- `cargo add [[PACKAGE_NAME]]` - To add new package from crates.io e.g. cargo add opencv
 
 ## Rust sample program
 
@@ -226,7 +227,7 @@ fn main() {
 
 fn greet() -> &String {
     let msg = String::from("hello");
-    &msg // Throws cannot return reference to local variable msg, i.e. because a will be descoped
+    &msg // Throws cannot return reference to local variable msg, i.e. because msg will be descoped
 }
 ```
 
@@ -245,6 +246,23 @@ fn greet() -> String {
 ```
 
 ### 5. Condtional statements and loops
+
+#### Equilaterial triangle pattern program using for loop
+
+```rust
+fn main() {
+    let height = 20;
+    for i in 1..=(height) {
+        for _ in 1..=(height - i) {
+            print!(" ");
+        }
+        for _ in 1..(i * 2) {
+            print!("*");
+        }
+        println!("");
+    }
+}
+```
 
 ### 6. Structs
 
