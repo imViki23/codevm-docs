@@ -4,7 +4,6 @@ class HashTable:
 
     def __init__(self, size):
         self.buckets = [KeyedLinkedList() for _ in range(size)]
-        self.keys = []
 
     def hash(self, key):
         checksum = 0
@@ -20,6 +19,17 @@ class HashTable:
             return
         self.buckets[hash_index].append(key, value)
 
+    def get(self, key):
+        hash_index = self.hash(key)
+        content = self.buckets[hash_index].find(key)
+        if content != None:
+            return content.value
+        return None
+    
+    def remove(self, key):
+        hash_index = self.hash(key)
+        self.buckets[hash_index].remove(key)
+
     def debug(self):
         count = 0
         for content in self.buckets:
@@ -34,3 +44,10 @@ if __name__ == "__main__":
     a.set("kumar", 6)
     a.set("edi", 2)
     a.debug()
+    print('---------')
+    print(f'Value of kumar is {a.get("kumar")}')
+    a.remove("kumar")
+    print('---------')
+    a.debug()
+    print('---------')
+    print(f'Value of kumar is {a.get("kumar")}')

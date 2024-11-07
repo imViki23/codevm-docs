@@ -20,31 +20,17 @@ class KeyedLinkedList:
             current = current.next
         current.next = Node(key, value)
 
-    def remove_at(self, index):
-        if index < 0 or index >= self.size:
-            raise IndexError("Index error")
-        self.size = self.size - 1;
-        if index == 0:
-            self.head = self.head.next
-            return
+    def remove(self, key):
+        prev = None
         current = self.head
-        current_index = 1
-        while current_index < index:
+        while current != None:
+            if current.key == key:
+                if prev == None:
+                    self.head = None
+                else:
+                    prev.next = current.next
+            prev = current
             current = current.next
-            current_index = current_index + 1
-        current.next = current.next.next
-
-    def get(self, index):
-        if index < 0 or index >= self.size:
-            raise IndexError("Index error")
-        if index == 0:
-            return self.head.data
-        current = self.head
-        current_index = 1
-        while current_index <= index:
-            current = current.next
-            current_index = current_index + 1
-        return current.data
     
     def find(self, key):
         current = self.head
@@ -58,7 +44,7 @@ class KeyedLinkedList:
         current = self.head
         print('[', end='')
         while current != None:
-            print(f'({current.key}, {current.value})', end='')
+            print(f'({current.key} = {current.value})', end='')
             current = current.next
             if current != None:
                 print(',', end='')
@@ -73,5 +59,8 @@ class KeyedLinkedList:
 if __name__ == "__main__":
     a = KeyedLinkedList()
     a.append("vignesh", 80)
+    a.append("muthu", 80)
     a.append("kumar", 80)
+    a.debug()
+    a.remove("muthu")
     a.debug()
